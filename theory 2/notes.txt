@@ -1,0 +1,32 @@
+LD_1103.pdf from 
+http://stats.lse.ac.uk/kalogeropoulos/LD_1103.pdf#sthash.zOxvHOUY.dpuf
+
+F_t is filtration is set of x_theta is defined as sigma of sets X 0 to current t
+
+maximum likehood estimation from scratch (numerical evaluation)
+
+http://www.gaussianwaves.com/2012/10/likelihood-function-and-maximum-likelihood-estimation-mle/
+http://www.statlect.com/normal_distribution_maximum_likelihood.htm
+
+s=1; %Assume standard deviation s=1
+ 
+rangeA=-2:0.1:5; %Range of values of estimation parameter to test
+L=zeros(1,length(rangeA)); %Place holder for likelihoods
+ 
+for i=1:length(rangeA)
+    %Calculate Likelihoods for each parameter value in the range
+    L(i) = exp(-sum((x-rangeA(i)).^2)/(2*s^2));  %Neglect the constant term (1/(sqrt(2*pi)*sigma))^N as it will pull %down the likelihood value to zero for increasing value of N
+end
+ 
+[maxL,index]=max(L); %Select the parameter value with Maximum Likelihood
+display('Maximum Likelihood of A');
+display(rangeA(index));
+
+
+From Sholom:
+ok. give me a few minutes..I have a few errands to run
+[3:20:40 PM]  Forumla #1 is a straight up function so it is easy to code up
+[3:20:45 PM]  formula
+[3:46:30 PM] Bryan Downing: ok
+[3:49:11 PM]  the other formulas are 2) general expectation which is another function
+[3:52:48 PM]  3) is a conditional probability based on a filtration (historical price path) coding this up is a lot more complicated. best bet is to google the following: 1) coding a PDF/CDF, 2) coding an expectation function, 3) coding a conditional PDF/CDF

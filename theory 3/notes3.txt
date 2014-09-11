@@ -1,0 +1,8 @@
+To convert to Matlab from within Mupad use: 
+
+fprint(Unquoted, Text, “cartesian.m”, generate::MATLAB(S)): 
+
+what does 1{tau<=t} get called ? what is the name of that notation?
+From Sholom:
+indicator function, 1 if tau < = t otherwise 0
+

@@ -1,0 +1,5 @@
+Helpful Mupad tutorial (with differential solution on pg 16)!
+
+http://www.brown.edu/Departments/Engineering/Courses/En4/Tutorials/Mupad_tutorial.pdf
+
+**Find optimal stepping rule, use calculations supplied (pg 10)
